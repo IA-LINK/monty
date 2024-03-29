@@ -7,9 +7,9 @@
  * @counter: line_number
  * Return: no return
  */
-void f_pstr(stack_t **head, unsigned int counter)
+void f_pstr(stack1_t **head, unsigned int counter)
 {
-	stack_t *h;
+	stack1_t *h;
 	(void)counter;
 
 	h = *head;

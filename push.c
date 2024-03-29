@@ -1,46 +1,19 @@
 #include "monty.h"
-
-
 /**
- * f_push - push or add node to the stack.
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * push_func - push opcode
+ * @stack: stack datastructure
+ * @line_number: line number in file
+ * Return: NULL
  */
-void f_push(stack_t **head, unsigned int counter)
+void push_func(stack1_t **stack, unsigned int line_number)
 {
-	int lifi = 0;
-	int n, j = 0, flag = 0;
-
-        if (bus.arg, lifi)
-        {
-                if (bus.arg[0] == '_')
-                        j++;
-                for (; bus.arg[j] != '\0'; j++)
-		{
-			if (bus.arg[j] > 57 || bus.arg[j] < 48)
-				flag = 1;
-		}
-		if (flag == 1)
-		{
-			fprintf(stderr, "L%d: usage: push integer\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
-		exit(EXIT_FAILURE);
-		}
-	}
-	else
+	char **data = loadlinedatatolist(line_number, variables.filename);
+	*stack = variables.head2;
+	if (strcmp(variables.mode, "stack") == 0)
+		addnodetostackfront(stack, atoi(data[1]));
+	else if (strcmp(variables.mode, "queue") == 0)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", counter); 
-		fclose(bus.file);
-                free(bus.content);
-                free_stack(*head);
-                exit(EXIT_FAILURE);
-        }
-	n = atoi(bus.arg);
-	if (bus.arg == lifi)
-		addnode(head, n);
-	else
-		addqueue(head, n);
+		addnodetostackend(stack, atoi(data[1]));
+	}
+	/*	freedata(&data);*/
 }

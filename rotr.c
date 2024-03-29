@@ -6,9 +6,9 @@
  * @counter: line_number
  * Return: no return
  */
-void f_rotr(stack_t **head, unsigned int counter)
+void f_rotr(stack1_t **head, unsigned int counter)
 {
-	stack_t *copy = *head;
+	stack1_t *copy = *head;
 	
 	(void)counter;
 
