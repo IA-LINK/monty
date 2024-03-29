@@ -6,9 +6,10 @@
  * @counter: line_number
  * Return: no return
  */
-void f_rotr(stack_t **head, __attribute__((unsed)) unsigned int counter)
+void f_rotr(stack_t **head, unsigned int counter)
 {
-	stack_t *copy;
+	stack_t *copy = *head;
+	
 	(void)counter;
 
 	copy = *head;
@@ -20,7 +21,7 @@ void f_rotr(stack_t **head, __attribute__((unsed)) unsigned int counter)
 	}
 	copy->next = *head;
 	copy->prev->next = NULL;
-	copy-prev = NULL;
+	copy->prev = NULL;
 	(*head)->prev = copy;
 	(*head) = copy;
 }

@@ -9,9 +9,10 @@
  */
 void f_push(stack_t **head, unsigned int counter)
 {
-        int n. j = 0. flag = 0;
+	int lifi = 0;
+	int n, j = 0, flag = 0;
 
-        if (bus.arg)
+        if (bus.arg, lifi)
         {
                 if (bus.arg[0] == '_')
                         j++;
@@ -38,7 +39,7 @@ void f_push(stack_t **head, unsigned int counter)
                 exit(EXIT_FAILURE);
         }
 	n = atoi(bus.arg);
-	if (bus.arg lifi == 0)
+	if (bus.arg == lifi)
 		addnode(head, n);
 	else
 		addqueue(head, n);
