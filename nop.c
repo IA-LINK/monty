@@ -1,13 +1,15 @@
 #include "monty.h"
 /**
-  *f_nop- nothing
-  *@head: stack head
-  *@counter: line_number
-  *Return: no return
+ * nop_func - do nothing
+ * @stack: structure
+ * @line_number: line number
+ * Return: Null
  */
-void f_nop(stack1_t **head, unsigned int counter)
+void nop_func(stack1_t **stack, unsigned int line_number)
 {
-	(void) counter;
-	(void) head;
-}
+	stack1_t *head = variables.head2;
 
+	(void)line_number;
+	(void)stack;
+	nopdonothing(&head, line_number);
+}

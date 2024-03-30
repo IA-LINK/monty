@@ -1,22 +1,17 @@
 #include "monty.h"
-
 /**
- * f_pall - prints the stack
- * @head: stack head
- * @counter: no used
- * Return: no return
+ * pall_func - pall print all node
+ * @stack: the datastructure
+ * @line_number: line number
+ * Return: done
  */
-void f_pall(stack1_t **head, unsigned int counter)
+void pall_func(stack1_t **stack, unsigned int line_number)
 {
-	stack1_t *h;
-	(void)counter;
+	const stack1_t *h = variables.head2;
 
-	h = *head;
-	if (h == NULL)
-		return;
-	while (h)
-	{
-		printf("%d\n", h->n);
-		h = h->next;
-	}
+	(void)stack;
+	(void)line_number;
+	print_stack(&h, line_number);
+
+
 }
