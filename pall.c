@@ -5,13 +5,18 @@
  * @line_number: line number
  * Return: done
  */
-void pall_func(stack1_t **stack, unsigned int line_number)
+void pall_func(stack1_t **head, unsigned int counter)
 {
-	const stack1_t *h = variables.head2;
+	stack1_t *h = *head;
+	(void)counter;
+	(void)head;
 
-	(void)stack;
-	(void)line_number;
-	print_stack(&h, line_number);
-
-
+	h = *head;
+	if (h == NULL)
+		return;
+	while (h)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
 }

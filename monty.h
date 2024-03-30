@@ -108,7 +108,8 @@ void addnodetostackfront(stack1_t **head, const int n);
 stack1_t *mallocend(stack1_t *node, const int data);
 stack1_t *addnodetostackend(stack1_t **head, const int n);
 void free_stack(stack1_t *head);
-void pall_func(stack1_t **stack, unsigned int line_number);
+/*void pall_func(stack1_t **stack, unsigned int line_number);*/
+void pall_func(stack1_t **head, unsigned int counter);
 void print_stack(const stack1_t  **h, unsigned int ln);
 void *loadlinedata(int ln, char *file);
 char **tokenize(char *line);

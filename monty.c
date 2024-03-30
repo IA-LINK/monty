@@ -11,6 +11,8 @@ void exitHandler(void)
 	if (close(variables.fileDescriptor) == -1)
 		return;
 }
+
+
 /**
  * checkFileExtension - check extension
  * @filename: file
