@@ -12,7 +12,7 @@ void swaptoptwostack(stack1_t **head, unsigned int ln)
 	*head = variables.head2;
 	if (*head == NULL || (*head)->next == NULL)
 	{
-		vprintf(2, "L%d: can't swap, stack too short\n", ln);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 		return;
 	}

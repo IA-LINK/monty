@@ -1,14 +1,15 @@
 #include "monty.h"
 /**
- * f_swap - adds the top two elements of the stack.
+ * swap_func - adds the top two elements of the stack.
  * @head: stack head
  * @counter: line_number
  * Return: no return
 */
-void f_swap(stack1_t **head, unsigned int counter)
+void swap_func(stack1_t **head, unsigned int counter)
 {
 	stack1_t *h;
 	int len = 0, aux;
+	struct Bus bus = {NULL};
 
 	h = *head;
 	while (h)

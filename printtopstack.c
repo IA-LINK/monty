@@ -13,7 +13,7 @@ void printtopstack(const stack1_t **h, unsigned int ln)
 	(void)h;
 	if (curr == NULL)
 	{
-		vprintf(2, "L%d: can't pint, stack empty\n", ln);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", ln);
 		exit(EXIT_FAILURE);
 	}
 	while (curr != NULL)

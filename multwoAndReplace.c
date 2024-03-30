@@ -10,7 +10,7 @@ stack1_t *createNodemul(int data)
 
 	if (newNode == NULL)
 	{
-		dprintf(2, "Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 	newNode->n = data;
@@ -35,7 +35,7 @@ void multwoAndReplace(stack1_t **head, unsigned int ln)
 	*head = variables.head2;
 	if (*head == NULL || (*head)->next == NULL)
 	{
-		dprintf(2, "L%d: can't mul, stack too short\n", ln);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 		return;
 	}

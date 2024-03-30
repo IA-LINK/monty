@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * pall_func - pall print all node
- * @stack: the datastructure
+ * @stack: the data structure
  * @line_number: line number
  * Return: done
  */

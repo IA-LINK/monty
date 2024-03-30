@@ -27,12 +27,13 @@ typedef struct token_t
 	char *_token[50000];
 } token_t;
 
+
 extern struct Bus
 {
 	FILE *file;
 	char *content;
 	char *arg;
-} bus;
+}bus;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer

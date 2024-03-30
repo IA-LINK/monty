@@ -10,7 +10,7 @@ stack1_t *createNodemod(int data)
 
 	if (newNode == NULL)
 	{
-		dprintf(2, "Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 	newNode->n = data;
@@ -36,7 +36,7 @@ void modtwoAndReplace(stack1_t **head, unsigned int ln)
 	*head = variables.head2;
 	if (*head == NULL || (*head)->next == NULL)
 	{
-		dprintf(2, "L%d: can't mod, stack too short\n", ln);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 		return;
 	}
@@ -45,7 +45,7 @@ void modtwoAndReplace(stack1_t **head, unsigned int ln)
 	second = (*head)->next;
 	if (first->n == 0)
 	{
-		dprintf(2, "L%d: division by zero\n", ln);
+		fprintf(stderr, "L%d: division by zero\n", ln);
 		exit(EXIT_FAILURE);
 	}
 	mod = second->n % first->n;
